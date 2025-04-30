@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CodeFixHub Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css" rel="stylesheet" />
+</head>
+<body>
+  
+  <nav class="navbar">
+    <a href="index.html" class="logo">CodeFixHub</a>
+    <ul class="nav-links"></ul>
+  </nav>
+
+  
+  <section class="dashboard">
+    <div class="dashboard-header">
+      <h2>Code Fix Dashboard</h2>
+      <p class="remaining">Remaining analyses: <span id="remaining-analyses">2</span>/2</p>
+    </div>
+
+    <div class="dashboard-content">
+      <div class="code-editor">
+        <div class="editor-header">
+          <label for="language-select" class="language-label">Language:</label>
+          <select id="language-select">
+            <option>JavaScript</option>
+            <option>Python</option>
+            <option>Java</option>
+            <option>C++</option>
+            <option>TypeScript</option>
+            <option>Go</option>
+            <option>Ruby</option>
+            <option>PHP</option>
+            <option>C#</option>
+            <option>Swift</option>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>React</option>
+          </select>
+        </div>
+
+        <textarea id="codeInput" placeholder="// Paste or upload your code here..."></textarea>
+
+        <input type="file" id="codeUpload" accept=".js,.py,.java,.cpp,.ts,.cs,.html,.css,.jsx,.txt" onchange="handleFileUpload()" />
+
+        <div class="action-buttons">
+          <button class="btn secondary-btn" onclick="clearCode()">Clear</button>
+          <button class="btn primary-btn" onclick="analyzeCode()">Analyze & Fix</button>
+        </div>
+      </div>
+
+      <div class="analysis-results">
+        <h3>Analysis Results</h3>
+        <div id="result-placeholder" class="results">Click "Analyze & Fix" to get results</div>
+      </div>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-java.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-cpp.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-typescript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-go.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-ruby.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-php.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-csharp.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-swift.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-markup.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-jsx.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | CodeFixHub</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a);
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+
+    .signup-container {
+      background-color: #121212;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .signup-logo {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .signup-container h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    .signup-container p {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    .signup-container input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #444;
+      background-color: #1e1e1e;
+      color: white;
+    }
+
+    .signup-container input::placeholder {
+      color: #888;
+    }
+
+    .signup-container button {
+      width: 100%;
+      padding: 12px;
+      background-color: #3548f2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .signup-container button:hover {
+      background-color: #3548f2;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <div class="signup-logo">
+      <img src="logo-light.png" alt="CodeFixHub Logo" style="height: 32px;" />
+    </div>
+    <h2>Sign Up</h2>
+    <p>Get unlimited AI debugging access after payment.</p>
+
+    <form action="https://formsubmit.co/Martimicm1010@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+      <input type="hidden" name="_next" value="https://buy.stripe.com/test_fZe29Td3H3rD1qg8ww">
+      <button type="submit">Get Started</button>
+    </form>
+  </div>
+</body>
+</html>
